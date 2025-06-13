@@ -1,0 +1,40 @@
+version: 1
+extends: ../papers.yml
+project:
+  id: scipy-2025-deepyaman_datta
+  title: "Python is all you need: an overview of the composable, Python-native data stack"
+  description: >
+    For the past decade, tools like dbt have formed a cornerstone of the modern data
+    stack, and Python-first alternatives couldn't compete with the scale and performance
+    of modern SQL—until now. New integrations with Ibis, the portable Python dataframe
+    library, enable building and orchestrating scalable data engineering pipelines using
+    existing open-source libraries like Kedro, Pandera, and more.
+  authors:
+    - name: Deepyaman Datta
+      email: deepyaman.datta@utexas.edu
+      orcid: 0000-0000-0000-0000 # TODO(deepyaman)
+      affiliation:
+        - Kedro
+  keywords:
+    - terraforming
+    - desert
+    - numerical perspective
+  # Add the abbreviations that you use in your paper here
+  abbreviations:
+    MyST: Markedly Structured Text
+  # It is possible to explicitly ignore the `doi-exists` check for certain citation keys
+  error_rules:
+    - rule: doi-exists
+      severity: ignore
+      keys:
+        - Atr03
+        - terradesert
+        - jupyter
+        - sklearn1
+        - sklearn2
+  exports:
+    - id: pdf
+      format: typst
+      template: https://github.com/curvenote-templates/scipy.git
+      article: main.md
+      output: full_text.pdf
